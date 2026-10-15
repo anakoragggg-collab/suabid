@@ -2,114 +2,396 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#24150f">
-<title>Warkop Murahan — Jajan Enak, Harga Bersahabat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#321b12">
+<title>Warkop Murahan</title>
 <style>
-:root{--ink:#261710;--coffee:#3b2116;--cream:#fff7e9;--paper:#fffdf8;--orange:#f59e0b;--red:#c94b2c;--muted:#78685d;--green:#23754b;--line:#eadbc8;--shadow:0 14px 40px #32190d12}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.topbar{background:var(--coffee);color:#fff3df;padding:10px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.86rem}.topbar a{color:#ffd98d;text-decoration:none}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 5%;gap:20px;background:var(--paper);position:sticky;top:0;z-index:5;box-shadow:0 3px 16px #24150f0b}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}.logo{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:var(--orange);font-size:26px}.brand strong{display:block;font-size:1.2rem;letter-spacing:-.5px}.brand small{color:var(--muted)}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{color:var(--ink);text-decoration:none;font-weight:650;font-size:.95rem}.cartbtn,.primary,.secondary{border:0;border-radius:13px;padding:12px 17px;font-weight:800;transition:.2s}.cartbtn,.primary{background:var(--red);color:white}.cartbtn:hover,.primary:hover{background:#a83b22;transform:translateY(-1px)}.hero{padding:64px 5% 58px;background:radial-gradient(circle at 80% 25%,#ffda87 0,transparent 25%),linear-gradient(120deg,#321b12,#63321d);color:white;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:35px;overflow:hidden}.eyebrow{display:inline-block;color:#ffda87;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:.8rem}.hero h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.98;letter-spacing:-2px;margin:16px 0}.hero h1 span{color:#ffc451}.hero p{color:#f4dfcb;max-width:560px;line-height:1.7;font-size:1.05rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.secondary{background:#fff3df;color:var(--coffee);text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.hero-art{min-height:290px;display:grid;place-items:center;position:relative}.food-circle{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#ffd67a,#ed8e36);display:grid;place-items:center;font-size:clamp(7rem,15vw,11rem);box-shadow:0 25px 65px #160b0790;transform:rotate(-7deg);border:10px solid #ffe9b4}.floating{position:absolute;background:white;color:var(--ink);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-weight:800}.floating.one{top:15%;right:0;transform:rotate(5deg)}.floating.two{bottom:12%;left:0;transform:rotate(-5deg)}.section{padding:56px 5%}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:25px}.sectionhead h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:5px 0}.sectionhead p{margin:0;color:var(--muted)}.kicker{font-weight:850;color:var(--red);font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:#fffaf1;border-radius:100px;padding:9px 16px;color:var(--ink);font-weight:750}.filter.active{background:var(--coffee);color:white;border-color:var(--coffee)}.menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.item{background:var(--paper);border:1px solid #f0e5d6;border-radius:20px;padding:15px;box-shadow:0 6px 20px #32190d06;display:flex;flex-direction:column;min-width:0;transition:.2s}.item:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.foodpic{height:135px;border-radius:14px;background:linear-gradient(135deg,#fff0cf,#f6d5a5);display:grid;place-items:center;font-size:4.4rem;margin-bottom:13px}.item h3{margin:0 0 5px;font-size:1.04rem}.item p{font-size:.86rem;color:var(--muted);margin:0 0 14px;line-height:1.45;min-height:38px}.itembottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}.price{font-weight:900;color:var(--red);font-size:1.02rem}.add{border:0;background:#fce6b8;color:#6d3717;border-radius:10px;width:38px;height:38px;font-size:1.4rem;font-weight:900}.add:hover{background:var(--orange);color:#24150f}.order-section{background:#f4e5d0}.checkout-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}.panel h3{margin:0 0 18px;font-size:1.25rem}.cart-empty{text-align:center;padding:30px 10px;color:var(--muted)}.cartrow{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartrow:last-of-type{border-bottom:0}.cartname{font-weight:800}.cartprice{font-size:.87rem;color:var(--muted);margin-top:4px}.qty{display:flex;align-items:center;gap:9px}.qty button{border:1px solid var(--line);background:#fff8ec;border-radius:8px;width:30px;height:30px;font-weight:900}.qty .remove{border:0;background:transparent;color:var(--red);font-size:.85rem;width:auto}.summary{border-top:1px dashed #d7c3ac;margin-top:15px;padding-top:13px}.sumrow{display:flex;justify-content:space-between;gap:12px;margin:9px 0;color:#5e4c40}.sumrow.total{font-size:1.15rem;font-weight:900;color:var(--ink);border-top:1px solid var(--line);padding-top:13px;margin-top:14px}.field{margin-bottom:15px}.field label{display:block;font-size:.9rem;font-weight:800;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;border:1px solid #ddcbb7;background:#fffdf9;border-radius:11px;padding:12px 13px;outline:none;color:var(--ink)}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--orange);box-shadow:0 0 0 3px #f59e0b22}.field textarea{min-height:85px;resize:vertical}.twofields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.delivery-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.delivery-option{border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;gap:9px;align-items:center;cursor:pointer;font-weight:750;background:#fffaf1}.delivery-option:has(input:checked){border-color:var(--green);background:#edf8f0}.delivery-option input{accent-color:var(--green)}.notice{font-size:.83rem;color:var(--muted);line-height:1.55;background:#fff5e5;padding:12px;border-radius:11px;margin:12px 0 17px}.whatsapp{width:100%;background:#16864a;color:white;border:0;border-radius:13px;padding:15px;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;gap:9px}.whatsapp:hover{background:#106c3a}.error{display:none;color:#b42318;background:#fff0ef;padding:11px;border-radius:10px;margin-bottom:12px;font-size:.9rem}.location{display:grid;grid-template-columns:.7fr 1.3fr;gap:25px;align-items:center}.mapcard{background:linear-gradient(135deg,#3b2116,#7a3d22);color:white;padding:27px;border-radius:22px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}.mapcard .pin{font-size:2.5rem}.mapcard p{color:#f8ddc6;line-height:1.6}.footer{background:var(--coffee);color:#f6e7d4;padding:28px 5%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer p{margin:4px 0;color:#d9c0aa;font-size:.9rem}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#24150f;color:white;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:10;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}.mobilecart{display:none}
-@media(max-width:1000px){.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr .7fr}.navlinks{gap:12px}}
-@media(max-width:720px){.nav{padding:12px 5%}.navlinks a{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{min-height:240px}.food-circle{width:230px}.floating.one{right:7%}.floating.two{left:7%}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.item{padding:10px;border-radius:16px}.foodpic{height:105px;font-size:3.5rem}.item p{font-size:.8rem;min-height:48px}.item h3{font-size:.95rem}.price{font-size:.92rem}.section{padding:42px 5%}.checkout-grid,.location{grid-template-columns:1fr}.panel{padding:18px}.twofields{grid-template-columns:1fr}.mobilecart{display:flex;position:fixed;bottom:12px;left:5%;right:5%;z-index:6;justify-content:space-between;align-items:center;background:var(--coffee);color:white;padding:12px 15px;border-radius:15px;box-shadow:0 10px 35px #24150f55;text-decoration:none;font-weight:850}.footer{padding-bottom:85px}}
-@media(max-width:360px){.menu-grid{grid-template-columns:1fr}.foodpic{height:130px}.delivery-options{grid-template-columns:1fr}}
+:root {
+  --cokelat:#321b12; --cokelat2:#633b27; --krem:#fff7e9;
+  --oranye:#f5a623; --merah:#c94b2c; --putih:#fffdf8;
+  --abu:#78685d; --hijau:#16864a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--krem);color:var(--cokelat);font-family:Arial,sans-serif}
+button,input,textarea{font:inherit}
+button,a{cursor:pointer}
+header{background:var(--cokelat);color:white;padding:15px 5%}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold}
+.logo small{display:block;font-size:12px;color:#f8d9b4;margin-top:4px}
+.nav button,.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:bold;text-decoration:none;display:inline-block}
+.nav button,.btn-red{background:var(--merah);color:white}
+.hero{padding:55px 5%;background:linear-gradient(120deg,#321b12,#754126);color:white}
+.hero h1{font-size:clamp(38px,7vw,65px);line-height:1.04;margin:12px 0}
+.hero h1 span{color:#ffc451}
+.hero p{line-height:1.7;color:#f8e7d4;max-width:600px}
+.hero .btn{margin:12px 8px 0 0}
+.btn-light{background:#fff0d4;color:#321b12}
+section{padding:38px 5%}
+h2{font-size:30px;margin:8px 0}
+.subtitle{color:var(--abu);line-height:1.6}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.filters button{border:1px solid #e5d2bc;border-radius:30px;padding:10px 16px;background:white;font-weight:bold}
+.filters button.active{background:var(--cokelat);color:white}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.card{background:var(--putih);border:1px solid #eee0ce;border-radius:18px;padding:13px;display:flex;flex-direction:column;box-shadow:0 5px 18px #321b1208}
+.emoji{background:#ffedcf;border-radius:13px;display:grid;place-items:center;height:115px;font-size:55px}
+.card h3{margin:13px 0 5px}
+.card p{font-size:13px;color:var(--abu);line-height:1.5;flex:1}
+.price{color:var(--merah);font-weight:bold}
+.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.add{border:0;border-radius:10px;width:38px;height:38px;background:#ffe2a8;font-size:24px;font-weight:bold}
+#pesan{background:#f1dfc7}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.panel{background:white;border:1px solid #ead7c1;border-radius:18px;padding:20px;margin-bottom:18px}
+.panel h3{margin-top:0}
+.empty{text-align:center;padding:30px 5px;color:var(--abu);line-height:1.8}
+.cartrow{display:grid;grid-template-columns:1fr auto;gap:8px;padding:13px 0;border-bottom:1px solid #eee0ce}
+.cartrow small{display:block;color:var(--abu);margin-top:5px}
+.qty{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.qty button{border:1px solid #e5d2bc;border-radius:7px;background:#fff7e9;padding:5px 9px}
+.qty .del{color:#b42318}
+.totalrow{display:flex;justify-content:space-between;gap:10px;padding:9px 0}
+.grand{border-top:1px solid #ead7c1;margin-top:8px;padding-top:15px;font-size:19px;font-weight:bold}
+.note{background:#fff3df;border-radius:10px;padding:12px;font-size:13px;line-height:1.6;color:#72543d;margin:14px 0}
+.field{margin:14px 0}
+.field label{display:block;font-size:14px;font-weight:bold;margin-bottom:7px}
+.field input,.field textarea{width:100%;padding:12px;border:1px solid #dfcbb5;border-radius:10px;background:#fffdf9}
+.field textarea{min-height:80px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.delivery{display:flex;gap:10px;flex-wrap:wrap}
+.delivery label{flex:1;min-width:120px;border:1px solid #e5d2bc;padding:12px;border-radius:10px;background:#fff9ef}
+.delivery input{width:auto}
+.whatsapp{width:100%;padding:15px;border:0;border-radius:12px;background:var(--hijau);color:white;font-weight:bold;font-size:16px}
+.whatsapp:hover{background:#106c3a}
+.error{display:none;color:#b42318;background:#fff0ef;padding:12px;border-radius:10px;line-height:1.5}
+.location{background:var(--cokelat);color:white;border-radius:18px;padding:24px;line-height:1.8}
+.location p{color:#f5dfcc}
+footer{background:var(--cokelat);color:white;text-align:center;padding:25px;line-height:1.8}
+.mobile-cart{display:none}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .columns{grid-template-columns:1fr}
+ .hero{padding-top:40px}
+ .card{padding:10px}
+ .emoji{height:95px;font-size:45px}
+ .card h3{font-size:15px}
+ .row{grid-template-columns:1fr}
+ .mobile-cart{display:flex;position:fixed;z-index:5;bottom:10px;left:4%;right:4%;padding:14px;background:var(--cokelat);color:white;text-decoration:none;border-radius:13px;justify-content:space-between;box-shadow:0 5px 25px #0004;font-weight:bold}
+ footer{padding-bottom:75px}
+}
 </style>
 </head>
 <body>
-<div class="topbar"><span>☕ Bikin kenyang, tetap hemat!</span><span>📍 Jl. Kudus 2, Rawa Bebek, Blok E 6 No. 9</span></div>
-<nav class="nav">
-<a class="brand" href="#beranda"><span class="logo">🍜</span><span><strong>Warkop Murahan</strong><small>Jajan enak, harga bersahabat</small></span></a>
-<div class="navlinks"><a href="#menu">Menu</a><a href="#lokasi">Lokasi</a><a href="#pesan">Cara Pesan</a></div>
-<button class="cartbtn" onclick="goToOrder()">🛒 Keranjang <span id="navCount">0</span></button>
-</nav>
-<header class="hero" id="beranda">
-<div><span class="eyebrow">Teman nongkrong setiap saat</span><h1>Lapar? Gas ke <span>Warkop!</span></h1><p>Menu favorit dengan harga ramah di kantong. Pilih camilan, racik minuman favorit, lalu pesan langsung lewat WhatsApp. Gampang dan praktis!</p><div class="hero-actions"><a class="primary" href="#menu" style="text-decoration:none">Lihat Menu ↓</a><a class="secondary" href="#pesan">Pesan Sekarang</a></div></div>
-<div class="hero-art"><div class="food-circle">🍜</div><div class="floating one">💸 Harga bersahabat</div><div class="floating two">😋 Enak buat kapan aja</div></div>
+
+<header>
+  <div class="nav">
+    <div class="logo">🍜 WARKOP MURAHAN
+      <small>Jajan enak, harga bersahabat!</small>
+    </div>
+    <button onclick="kePesanan()">🛒 Keranjang (<span id="jumlahAtas">0</span>)</button>
+  </div>
 </header>
-<section class="section" id="menu">
-<div class="sectionhead"><div><span class="kicker">Pilih kesukaanmu</span><h2>Menu Warkop</h2><p>Tambah jumlah sesuai selera, ya!</p></div></div>
-<div class="filters"><button class="filter active" data-filter="semua">Semua Menu</button><button class="filter" data-filter="makanan">🍟 Makanan</button><button class="filter" data-filter="minuman">🥤 Minuman</button></div>
-<div class="menu-grid" id="menuGrid"></div>
+
+<div class="hero">
+  <div style="font-weight:bold;color:#ffc451">☕ TEMAN NONGKRONG SETIAP SAAT</div>
+  <h1>Lapar? Gas ke<br><span>Warkop Murahan!</span></h1>
+  <p>Nikmati camilan, mie favorit, dan minuman segar dengan harga ramah di kantong. Pilih menu, isi data, dan pesan langsung lewat WhatsApp.</p>
+  <a class="btn btn-red" href="#menu">Lihat Menu ↓</a>
+  <a class="btn btn-light" href="#pesan">Pesan Sekarang</a>
+</div>
+
+<section id="menu">
+  <h2>🍽️ Menu Kami</h2>
+  <div class="subtitle">Pilih menu favorit dan tekan tombol + untuk menambahkan pesanan.</div>
+  <div class="filters">
+    <button class="active" data-filter="semua">Semua</button>
+    <button data-filter="makanan">🍟 Makanan</button>
+    <button data-filter="minuman">🥤 Minuman</button>
+  </div>
+  <div class="grid" id="daftarMenu"></div>
 </section>
-<section class="section order-section" id="pesan">
-<div class="sectionhead"><div><span class="kicker">Tinggal beberapa langkah</span><h2>Pesanan Kamu</h2><p>Cek keranjang dan isi data sebelum lanjut ke WhatsApp.</p></div></div>
-<div class="checkout-grid">
-<div class="panel"><h3>🛒 Keranjang belanja</h3><div id="cartItems"><div class="cart-empty">Keranjang masih kosong.<br>Pilih menu favoritmu dulu, yuk! 😋</div></div><div class="summary"><div class="sumrow"><span>Subtotal</span><strong id="subtotal">Rp0</strong></div><div class="sumrow"><span>Ongkir</span><strong id="shipping">Rp0</strong></div><div class="sumrow total"><span>Total pembayaran</span><strong id="total">Rp0</strong></div></div><div class="notice">ℹ️ Ongkir antar saat ini dihitung sementara Rp5.000. Konfirmasi ongkir final dengan penjual melalui WhatsApp. Ambil sendiri tidak dikenakan ongkir.</div></div>
-<div class="panel"><h3>📝 Data pemesan</h3>
-<div id="formError" class="error">Mohon lengkapi nama, nomor HP, dan alamat jika memilih antar.</div>
-<form id="checkoutForm">
-<div class="twofields"><div class="field"><label for="name">Nama lengkap *</label><input id="name" name="name" placeholder="Nama kamu" required maxlength="80"></div><div class="field"><label for="phone">No. HP *</label><input id="phone" name="phone" placeholder="08xxxxxxxxxx" inputmode="tel" required maxlength="20"></div></div>
-<div class="field"><label>Pesanan ingin *</label><div class="delivery-options"><label class="delivery-option"><input type="radio" name="delivery" value="antar" checked> 🚚 Diantar</label><label class="delivery-option"><input type="radio" name="delivery" value="ambil"> 🛍️ Ambil sendiri</label></div></div>
-<div id="addressField" class="field"><label for="address">Alamat lengkap *</label><textarea id="address" name="address" placeholder="Nama jalan, nomor rumah, RT/RW, patokan..." required maxlength="350"></textarea></div>
-<div class="field"><label for="notes">Catatan pesanan (opsional)</label><textarea id="notes" name="notes" placeholder="Contoh: mie tidak pedas, es sedikit..." maxlength="500"></textarea></div>
-<div class="notice">📲 Tombol di bawah akan membuka WhatsApp dengan rangkuman pesanan. Periksa kembali lalu tekan <b>Kirim</b> di WhatsApp untuk mengirimnya ke warkop.</div>
-<button type="submit" class="whatsapp">☘ Pesan via WhatsApp</button>
-</form>
-</div></div>
+
+<section id="pesan">
+  <h2>🛒 Pesanan Kamu</h2>
+  <p class="subtitle">Periksa pesanan dan lengkapi data sebelum mengirim ke WhatsApp.</p>
+  <div class="columns">
+    <div class="panel">
+      <h3>Keranjang Belanja</h3>
+      <div id="isiKeranjang"></div>
+      <div class="totalrow"><span>Subtotal</span><b id="subtotal">Rp0</b></div>
+      <div class="totalrow"><span>Ongkir</span><b id="ongkir">Rp0</b></div>
+      <div class="totalrow grand"><span>Total</span><b id="total">Rp0</b></div>
+      <div class="note">🚚 Ongkir sementara Rp5.000 untuk antar. Ambil sendiri gratis ongkir. Konfirmasikan ongkir akhir dengan penjual melalui WhatsApp.</div>
+      <button class="btn btn-red" onclick="kosongkan()" style="width:100%">Kosongkan Keranjang</button>
+    </div>
+
+    <div class="panel">
+      <h3>📝 Data Pemesan</h3>
+      <div class="error" id="error"></div>
+      <form id="formPesan">
+        <div class="row">
+          <div class="field">
+            <label for="nama">Nama lengkap *</label>
+            <input id="nama" required maxlength="80" placeholder="Nama kamu">
+          </div>
+          <div class="field">
+            <label for="hp">Nomor HP *</label>
+            <input id="hp" required maxlength="20" inputmode="tel" placeholder="08xxxxxxxxxx">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Metode pesanan *</label>
+          <div class="delivery">
+            <label><input type="radio" name="metode" value="antar" checked> 🚚 Diantar</label>
+            <label><input type="radio" name="metode" value="ambil"> 🛍️ Ambil sendiri</label>
+          </div>
+        </div>
+
+        <div class="field" id="bungkusAlamat">
+          <label for="alamat">Alamat lengkap *</label>
+          <textarea id="alamat" required maxlength="350" placeholder="Jalan, nomor rumah, RT/RW, patokan"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="catatan">Catatan pesanan (opsional)</label>
+          <textarea id="catatan" maxlength="500" placeholder="Contoh: mie tidak pedas, es sedikit..."></textarea>
+        </div>
+
+        <div class="note">📲 Setelah tombol ditekan, WhatsApp akan terbuka dengan rincian pesanan. Periksa pesan dan tekan tombol Kirim di WhatsApp.</div>
+        <button class="whatsapp" type="submit">☘ Pesan Sekarang via WhatsApp</button>
+      </form>
+    </div>
+  </div>
 </section>
-<section class="section" id="lokasi"><div class="location"><div><span class="kicker">Mampir juga boleh</span><h2>Temukan Warkop Kami</h2><p style="line-height:1.7;color:var(--muted)">Mau ambil sendiri? Silakan datang ke alamat berikut. Untuk memastikan jam buka dan ketersediaan menu, hubungi kami melalui WhatsApp.</p><a class="primary" style="display:inline-block;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Jl.+Kudus+2+Rawa+Bebek+Blok+E+6+No+9" target="_blank" rel="noopener">📍 Buka Google Maps</a></div><div class="mapcard"><span class="pin">📍</span><div><strong>Warkop Murahan</strong><p>Jl. Kudus 2, Rawa Bebek,<br>Blok E 6 No. 9</p></div></div></div></section>
-<footer class="footer"><div><strong>🍜 Warkop Murahan</strong><p>Jajan enak, harga bersahabat.</p></div><p>Terima kasih sudah mampir. Semoga harimu makin nikmat! ❤️</p></footer>
-<a class="mobilecart" href="#pesan"><span>🛒 Lihat keranjang (<span id="mobileCount">0</span>)</span><span id="mobileTotal">Rp0 →</span></a>
-<div class="toast" id="toast" role="status"></div>
+
+<section id="lokasi">
+  <h2>📍 Lokasi Warkop</h2>
+  <div class="location">
+    <b>Warkop Murahan</b><br>
+    Jl. Kudus 2, Rawa Bebek, Blok E 6 No. 9
+    <p>Silakan datang untuk mengambil pesanan sendiri. Hubungi kami melalui WhatsApp untuk memastikan ketersediaan menu.</p>
+    <a class="btn btn-light" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/search/?api=1&query=Jl.+Kudus+2+Rawa+Bebek+Blok+E+6+No+9">Buka Google Maps ↗</a>
+  </div>
+</section>
+
+<footer>
+  <b>🍜 Warkop Murahan</b><br>
+  Jajan enak, harga bersahabat ❤️<br>
+  <small>Terima kasih sudah memesan!</small>
+</footer>
+
+<a class="mobile-cart" href="#pesan">
+  <span>🛒 Keranjang (<span id="jumlahBawah">0</span>)</span>
+  <span id="totalBawah">Rp0 →</span>
+</a>
+
 <script>
-const WHATSAPP_NUMBER = "6281234567890"; // GANTI dengan nomor WhatsApp pemilik warkop, format 62 tanpa tanda + atau 0 di depan.
-const DELIVERY_FEE = 5000;
+/* NOMOR WHATSAPP PEMILIK */
+const WHATSAPP_NUMBER = "6288975820370";
+
+/* ONGKIR ANTAR SEMENTARA */
+const ONGKIR_ANTAR = 5000;
+
+/* DAFTAR MENU DAN HARGA */
 const menu = [
-{id:"kentang",name:"Kentang Goreng",category:"makanan",price:10000,emoji:"🍟",desc:"Kentang renyah, teman nongkrong."},
-{id:"cireng",name:"Cireng",category:"makanan",price:8000,emoji:"🥟",desc:"Gurih dan nikmat buat camilan."},
-{id:"bakso",name:"Bakso",category:"makanan",price:12000,emoji:"🍲",desc:"Hangat, gurih, bikin nyaman."},
-{id:"mie-kuah",name:"Mie Kuah",category:"makanan",price:10000,emoji:"🍜",desc:"Mie hangat berkuah sedap."},
-{id:"mie-goreng",name:"Mie Goreng",category:"makanan",price:10000,emoji:"🍝",desc:"Mie gurih dengan bumbu nikmat."},
-{id:"mie-nyemek",name:"Mie Nyemek",category:"makanan",price:12000,emoji:"🍜",desc:"Perpaduan kuah dan mie goreng."},
-{id:"sosis",name:"Sosis Goreng",category:"makanan",price:8000,emoji:"🌭",desc:"Sosis goreng gurih dan praktis."},
-{id:"es-teh",name:"Es Teh Manis",category:"minuman",price:4000,emoji:"🧋",desc:"Segar, manis, pas buat makan."},
-{id:"soda-gembira",name:"Soda Gembira",category:"minuman",price:8000,emoji:"🥤",desc:"Minuman soda manis menyegarkan."},
-{id:"pop-ice",name:"Pop Ice",category:"minuman",price:5000,emoji:"🍧",desc:"Minuman es dengan rasa favorit."},
-{id:"kopi",name:"Kopi",category:"minuman",price:5000,emoji:"☕",desc:"Teman santai dan begadang."},
-{id:"air-putih",name:"Air Putih",category:"minuman",price:3000,emoji:"💧",desc:"Sederhana dan menyegarkan."}
+ {id:"kentang",nama:"Kentang Goreng",kategori:"makanan",harga:10000,emoji:"🍟",deskripsi:"Kentang renyah untuk camilan."},
+ {id:"cireng",nama:"Cireng",kategori:"makanan",harga:8000,emoji:"🥟",deskripsi:"Camilan gurih dan nikmat."},
+ {id:"bakso",nama:"Bakso",kategori:"makanan",harga:12000,emoji:"🍲",deskripsi:"Bakso hangat dengan kuah gurih."},
+ {id:"miekuah",nama:"Mie Kuah",kategori:"makanan",harga:10000,emoji:"🍜",deskripsi:"Mie hangat berkuah sedap."},
+ {id:"miegoreng",nama:"Mie Goreng",kategori:"makanan",harga:10000,emoji:"🍝",deskripsi:"Mie dengan bumbu gurih."},
+ {id:"mienyemek",nama:"Mie Nyemek",kategori:"makanan",harga:12000,emoji:"🍜",deskripsi:"Mie nyemek dengan kuah kental."},
+ {id:"sosis",nama:"Sosis Goreng",kategori:"makanan",harga:8000,emoji:"🌭",deskripsi:"Sosis goreng untuk teman santai."},
+ {id:"esteh",nama:"Es Teh Manis",kategori:"minuman",harga:4000,emoji:"🧋",deskripsi:"Manis dan menyegarkan."},
+ {id:"soda",nama:"Soda Gembira",kategori:"minuman",harga:8000,emoji:"🥤",deskripsi:"Minuman soda manis segar."},
+ {id:"popice",nama:"Pop Ice",kategori:"minuman",harga:5000,emoji:"🍧",deskripsi:"Minuman es dengan rasa favorit."},
+ {id:"kopi",nama:"Kopi",kategori:"minuman",harga:5000,emoji:"☕",deskripsi:"Teman santai dan begadang."},
+ {id:"air",nama:"Air Putih",kategori:"minuman",harga:3000,emoji:"💧",deskripsi:"Minuman sederhana menyegarkan."}
 ];
-const cart = {};
-const rupiah = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n);
-function renderMenu(filter="semua"){
- const grid=document.getElementById("menuGrid");
- grid.innerHTML="";
- menu.filter(m=>filter==="semua"||m.category===filter).forEach(m=>{
-  const card=document.createElement("article");card.className="item";
-  card.innerHTML=`<div class="foodpic" aria-hidden="true">${m.emoji}</div><h3>${m.name}</h3><p>${m.desc}</p><div class="itembottom"><span class="price">${rupiah(m.price)}</span><button class="add" aria-label="Tambah ${m.name}" title="Tambah ${m.name}" onclick="addItem('${m.id}')">+</button></div>`;
-  grid.appendChild(card);
+
+const keranjang = {};
+const rupiah = angka => new Intl.NumberFormat("id-ID", {
+ style:"currency", currency:"IDR", maximumFractionDigits:0
+}).format(angka);
+
+function daftarMenu(filter="semua") {
+ const wadah = document.getElementById("daftarMenu");
+ wadah.innerHTML = "";
+ menu.filter(m => filter==="semua" || m.kategori===filter).forEach(m => {
+   const kartu = document.createElement("article");
+   kartu.className = "card";
+   kartu.innerHTML = `
+    <div class="emoji">${m.emoji}</div>
+    <h3>${m.nama}</h3>
+    <p>${m.deskripsi}</p>
+    <div class="card-bottom">
+      <span class="price">${rupiah(m.harga)}</span>
+      <button class="add" aria-label="Tambah ${m.nama}" title="Tambah ${m.nama}">+</button>
+    </div>`;
+   kartu.querySelector(".add").addEventListener("click", () => tambah(m.id));
+   wadah.appendChild(kartu);
  });
 }
-function addItem(id){cart[id]=(cart[id]||0)+1;renderCart();const item=menu.find(m=>m.id===id);showToast(item.name+" ditambahkan ke keranjang");}
-function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart();}
-function removeItem(id){delete cart[id];renderCart();showToast("Menu dihapus dari keranjang");}
-function subtotal(){return menu.reduce((s,m)=>s+m.price*(cart[m.id]||0),0)}
-function countItems(){return Object.values(cart).reduce((a,b)=>a+b,0)}
-function isDelivery(){return document.querySelector('input[name="delivery"]:checked').value==="antar"}
-function shippingFee(){return countItems()&&isDelivery()?DELIVERY_FEE:0}
-function renderCart(){
- const holder=document.getElementById("cartItems");const chosen=menu.filter(m=>cart[m.id]);
- if(!chosen.length){holder.innerHTML='<div class="cart-empty">Keranjang masih kosong.<br>Pilih menu favoritmu dulu, yuk! 😋</div>'}
- else{holder.innerHTML="";chosen.forEach(m=>{const row=document.createElement("div");row.className="cartrow";row.innerHTML=`<div><div class="cartname">${m.emoji} ${m.name}</div><div class="cartprice">${rupiah(m.price)} × ${cart[m.id]} = <b>${rupiah(m.price*cart[m.id])}</b></div></div><div class="qty"><button aria-label="Kurangi ${m.name}" onclick="changeQty('${m.id}',-1)">−</button><b>${cart[m.id]}</b><button aria-label="Tambah ${m.name}" onclick="changeQty('${m.id}',1)">+</button><button class="remove" onclick="removeItem('${m.id}')">Hapus</button></div>`;holder.appendChild(row)})}
- document.getElementById("subtotal").textContent=rupiah(subtotal());document.getElementById("shipping").textContent=rupiah(shippingFee());document.getElementById("total").textContent=rupiah(subtotal()+shippingFee());
- document.getElementById("navCount").textContent=countItems();document.getElementById("mobileCount").textContent=countItems();document.getElementById("mobileTotal").textContent=rupiah(subtotal()+shippingFee())+" →";
+
+function tambah(id) {
+ keranjang[id] = (keranjang[id] || 0) + 1;
+ gambarKeranjang();
 }
-function goToOrder(){document.getElementById("pesan").scrollIntoView({behavior:"smooth"});}
-function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(window.toastTimeout);window.toastTimeout=setTimeout(()=>t.classList.remove("show"),2200)}
-document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderMenu(btn.dataset.filter)}));
-document.querySelectorAll('input[name="delivery"]').forEach(r=>r.addEventListener("change",()=>{const delivery=isDelivery();document.getElementById("addressField").style.display=delivery?"block":"none";document.getElementById("address").required=delivery;renderCart()}));
-document.getElementById("checkoutForm").addEventListener("submit",e=>{
- e.preventDefault();
- if(!countItems()){showToast("Keranjang masih kosong. Pilih menu dulu, ya!");goToOrder();return}
- const name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),address=document.getElementById("address").value.trim(),notes=document.getElementById("notes").value.trim();
- if(!name||!phone||(isDelivery()&&!address)){document.getElementById("formError").style.display="block";return}
- document.getElementById("formError").style.display="none";
- const lines=menu.filter(m=>cart[m.id]).map(m=>`- ${m.name} x${cart[m.id]} — ${rupiah(m.price*cart[m.id])}`);
- const mode=isDelivery()?"Diantar":"Ambil sendiri";
- const message=["Halo Warkop Murahan! Saya mau pesan:","",...lines,"","*RINCIAN PEMBAYARAN*","Subtotal: "+rupiah(subtotal()),"Ongkir: "+rupiah(shippingFee()),"*TOTAL: "+rupiah(subtotal()+shippingFee())+"*","","*DATA PEMESAN*","Nama: "+name,"No. HP: "+phone,"Metode: "+mode,...(isDelivery()?["Alamat: "+address]:[]),"Catatan: "+(notes||"-"),"","Mohon konfirmasi pesanan dan estimasi waktunya. Terima kasih!"].join("\n");
- if(WHATSAPP_NUMBER==="6281234567890"){const ok=confirm("Nomor WhatsApp masih contoh (6281234567890). Pesan akan dibuka ke nomor contoh. Sebaiknya edit kode HTML dan ganti WHATSAPP_NUMBER dengan nomor pemilik warkop. Lanjutkan?");if(!ok)return}
- const waUrl = "https://wa.me/"6288975820370"?text="+encodeURIComponent(message);
- // Navigasi langsung lebih kompatibel dengan browser/preview HTML di HP.
- window.location.href = waUrl;
+
+function ubahJumlah(id, nilai) {
+ keranjang[id] = (keranjang[id] || 0) + nilai;
+ if (keranjang[id] <= 0) delete keranjang[id];
+ gambarKeranjang();
+}
+
+function kosongkan() {
+ Object.keys(keranjang).forEach(id => delete keranjang[id]);
+ gambarKeranjang();
+}
+
+function jumlahBarang() {
+ return Object.values(keranjang).reduce((a,b) => a+b, 0);
+}
+
+function hitungSubtotal() {
+ return menu.reduce((total,m) => total + m.harga*(keranjang[m.id]||0), 0);
+}
+
+function metodeAntar() {
+ return document.querySelector('input[name="metode"]:checked').value === "antar";
+}
+
+function hitungOngkir() {
+ return jumlahBarang() > 0 && metodeAntar() ? ONGKIR_ANTAR : 0;
+}
+
+function gambarKeranjang() {
+ const isi = document.getElementById("isiKeranjang");
+ const dipilih = menu.filter(m => keranjang[m.id]);
+
+ if (!dipilih.length) {
+   isi.innerHTML = '<div class="empty">Keranjang masih kosong 😋<br>Silakan pilih menu terlebih dahulu.</div>';
+ } else {
+   isi.innerHTML = "";
+   dipilih.forEach(m => {
+     const baris = document.createElement("div");
+     baris.className = "cartrow";
+     baris.innerHTML = `
+       <div><b>${m.emoji} ${m.nama}</b>
+       <small>${rupiah(m.harga)} × ${keranjang[m.id]} = ${rupiah(m.harga*keranjang[m.id])}</small></div>
+       <div class="qty">
+         <button type="button" aria-label="Kurangi ${m.nama}">−</button>
+         <b>${keranjang[m.id]}</b>
+         <button type="button" aria-label="Tambah ${m.nama}">+</button>
+         <button type="button" class="del">Hapus</button>
+       </div>`;
+     const tombol = baris.querySelectorAll("button");
+     tombol[0].onclick = () => ubahJumlah(m.id,-1);
+     tombol[1].onclick = () => ubahJumlah(m.id,1);
+     tombol[2].onclick = () => { delete keranjang[m.id]; gambarKeranjang(); };
+     isi.appendChild(baris);
+   });
+ }
+
+ const sub = hitungSubtotal();
+ const ongkir = hitungOngkir();
+ const total = sub + ongkir;
+
+ document.getElementById("subtotal").textContent = rupiah(sub);
+ document.getElementById("ongkir").textContent = rupiah(ongkir);
+ document.getElementById("total").textContent = rupiah(total);
+ document.getElementById("jumlahAtas").textContent = jumlahBarang();
+ document.getElementById("jumlahBawah").textContent = jumlahBarang();
+ document.getElementById("totalBawah").textContent = rupiah(total)+" →";
+}
+
+function kePesanan() {
+ document.getElementById("pesan").scrollIntoView({behavior:"smooth"});
+}
+
+document.querySelectorAll(".filters button").forEach(tombol => {
+ tombol.addEventListener("click", () => {
+   document.querySelectorAll(".filters button").forEach(b => b.classList.remove("active"));
+   tombol.classList.add("active");
+   daftarMenu(tombol.dataset.filter);
+ });
 });
-renderMenu();renderCart();
+
+document.querySelectorAll('input[name="metode"]').forEach(radio => {
+ radio.addEventListener("change", () => {
+   const antar = metodeAntar();
+   document.getElementById("bungkusAlamat").style.display = antar ? "block" : "none";
+   document.getElementById("alamat").required = antar;
+   gambarKeranjang();
+ });
+});
+
+document.getElementById("formPesan").addEventListener("submit", function(event) {
+ event.preventDefault();
+
+ const error = document.getElementById("error");
+ error.style.display = "none";
+
+ if (jumlahBarang() === 0) {
+   error.textContent = "Keranjang masih kosong. Silakan pilih makanan atau minuman dahulu.";
+   error.style.display = "block";
+   kePesanan();
+   return;
+ }
+
+ const nama = document.getElementById("nama").value.trim();
+ const hp = document.getElementById("hp").value.trim();
+ const alamat = document.getElementById("alamat").value.trim();
+ const catatan = document.getElementById("catatan").value.trim();
+
+ if (!nama || !hp || (metodeAntar() && !alamat)) {
+   error.textContent = "Mohon lengkapi nama, nomor HP, dan alamat jika memilih diantar.";
+   error.style.display = "block";
+   return;
+ }
+
+ const daftarPesanan = menu
+   .filter(m => keranjang[m.id])
+   .map(m => `• ${m.nama} x${keranjang[m.id]} = ${rupiah(m.harga*keranjang[m.id])}`);
+
+ const subtotal = hitungSubtotal();
+ const ongkir = hitungOngkir();
+ const total = subtotal + ongkir;
+ const cara = metodeAntar() ? "Diantar" : "Ambil sendiri";
+
+ const pesan = [
+   "Halo Warkop Murahan! Saya ingin memesan:",
+   "",
+   ...daftarPesanan,
+   "",
+   "RINCIAN PEMBAYARAN",
+   "Subtotal: " + rupiah(subtotal),
+   "Ongkir: " + rupiah(ongkir),
+   "TOTAL: " + rupiah(total),
+   "",
+   "DATA PEMESAN",
+   "Nama: " + nama,
+   "No. HP: " + hp,
+   "Metode: " + cara,
+   ...(metodeAntar() ? ["Alamat: " + alamat] : []),
+   "Catatan: " + (catatan || "-"),
+   "",
+   "Mohon konfirmasi pesanan dan estimasi waktunya. Terima kasih!"
+ ].join("\n");
+
+ const tautan = "https://wa.me/" + WHATSAPP_NUMBER +
+                "?text=" + encodeURIComponent(pesan);
+
+ // Gunakan tautan HTTPS agar kompatibel dengan browser HP.
+ window.location.href = tautan;
+});
+
+daftarMenu();
+gambarKeranjang();
 </script>
 </body>
 </html>
