@@ -105,7 +105,7 @@ document.getElementById("checkoutForm").addEventListener("submit",e=>{
  const mode=isDelivery()?"Diantar":"Ambil sendiri";
  const message=["Halo Warkop Murahan! Saya mau pesan:","",...lines,"","*RINCIAN PEMBAYARAN*","Subtotal: "+rupiah(subtotal()),"Ongkir: "+rupiah(shippingFee()),"*TOTAL: "+rupiah(subtotal()+shippingFee())+"*","","*DATA PEMESAN*","Nama: "+name,"No. HP: "+phone,"Metode: "+mode,...(isDelivery()?["Alamat: "+address]:[]),"Catatan: "+(notes||"-"),"","Mohon konfirmasi pesanan dan estimasi waktunya. Terima kasih!"].join("\n");
  if(WHATSAPP_NUMBER==="6281234567890"){const ok=confirm("Nomor WhatsApp masih contoh (6281234567890). Pesan akan dibuka ke nomor contoh. Sebaiknya edit kode HTML dan ganti WHATSAPP_NUMBER dengan nomor pemilik warkop. Lanjutkan?");if(!ok)return}
- const waUrl = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);
+ const waUrl = "https://wa.me/"6288975820370"?text="+encodeURIComponent(message);
  // Navigasi langsung lebih kompatibel dengan browser/preview HTML di HP.
  window.location.href = waUrl;
 });
